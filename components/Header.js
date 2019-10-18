@@ -10,11 +10,11 @@ const TERTIARY_COLOR = '#5b40c2';
 const styles = {
 	header: {
 		width: '100%',
-		backgroundColor: PRIMARY_COLOR,
+		backgroundColor: LIGHT_SECONDARY_COLOR,
 		height: '50px',
-		color: LIGHT_SECONDARY_COLOR
+		color: PRIMARY_COLOR
 	},
-	navigation: { display: 'inline-block' },
+	navigation: { float: 'left' },
 	list: {
 		listStyle: 'none',
 		display: 'inline-block'
@@ -23,6 +23,9 @@ const styles = {
 		textDecoration: 'none',
 		fontSize: '20px',
 		display: 'inline-block'
+	},
+	myName: {
+		float: 'right',
 	}
 };
 
@@ -46,7 +49,7 @@ const Header = props => {
 					))}
 				</ul>
 			</nav>
-			<h2 style={{ display: 'inline-block' }}>Jatin Nagar</h2>
+			<h2 style={styles.myName}>Jatin Nagar</h2>
 		</header>
 	);
 };
