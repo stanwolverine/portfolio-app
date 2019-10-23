@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const PRIMARY_COLOR = '#3f6fb9';
+const YELLOW = 'rgb(255, 224, 0)';
 const PRIMARY_COLOR_LIGHT = '#3f90b4';
 const PRIMARY_COLOR_DARK = '#3f4bbe';
 const LIGHT_SECONDARY_COLOR = '#3eafaf';
@@ -21,7 +22,7 @@ const Header = props => {
 					<ul className='list'>
 						{headerLinks.map(links => (
 							<li key={links.path} className='link'>
-								<Link href={links.path}>
+								<Link href={links.path} target='_blank'>
 									<a className='anchor'>{links.routeName}</a>
 								</Link>
 							</li>
@@ -29,7 +30,9 @@ const Header = props => {
 					</ul>
 				</nav>
 				<h2 className='name-heading'>
-					<span>Jatin Nagar</span>
+					<Link href='https://github.com/stanwolverine'>
+						<a>Jatin Nagar</a>
+					</Link>
 				</h2>
 			</header>
 
@@ -41,7 +44,7 @@ const Header = props => {
 						width: 100%;
 						background-color: ${LIGHT_SECONDARY_COLOR};
 						height: 5.5rem;
-						color: lightgoldenrodyellow;
+						color: lightgoldenrodYELLOW;
 						display: flex;
 						flex-direction: row;
 						justify-content: space-between;
@@ -86,7 +89,7 @@ const Header = props => {
 					}
 
 					.link:hover {
-						background-color: #555;
+						color: rgb(242, 211, 87);
 					}
 
 					.link:hover::after {
@@ -100,20 +103,21 @@ const Header = props => {
 					}
 
 					.name-heading {
-						font-weight: 300;
 						display: flex;
 						align-items: center;
 						font-size: 1.8rem;
 						margin-right: 2rem;
 						letter-spacing: 1px;
-						cursor: pointer;
 					}
-					.name-heading:hover span {
-						background-image: linear-gradient(
-							to bottom right,
-							${PRIMARY_COLOR_LIGHT},
-							${PRIMARY_COLOR_DARK}
-						);
+
+					.name-heading a {
+						cursor: pointer;
+						color: inherit;
+						text-decoration: none;
+					}
+
+					.name-heading a:hover {
+						color: ${YELLOW};
 					}
 				`}
 			</style>
