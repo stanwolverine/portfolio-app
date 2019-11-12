@@ -14,7 +14,7 @@ class MyDocument extends Document {
 					<meta http-equiv='X-UA-Compatible' content='ie=edge' />
 					<style>
 						{`
-							@import url(https://fonts.googleapis.com/css?family=Abril+Fatface|Fjalla+One|Roboto|Oswald|Julius+Sans+One|Monoton|Titillium+Web:300,400,700|Ubuntu+Condensed&display=swap);
+							@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Open+Sans|Oswald|EB+Garamond|Montserrat|Merriweather|Raleway|Roboto+Slab|Playfair+Display|Source+Sans+Pro|Alegreya|Lato&display=swap);
 
 							*,
 							*::after,

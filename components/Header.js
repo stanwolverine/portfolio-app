@@ -39,12 +39,12 @@ const Header = props => {
 			<style jsx>
 				{`
 					.header {
-						font-family: Oswald;
-						text-transform: uppercase;
+						font-family: Roboto;
+						text-transform: capitalize;
 						width: 100%;
-						background-color: ${LIGHT_SECONDARY_COLOR};
+						background-color: rgba(255, 255, 255, 0.8);
 						height: 5.5rem;
-						color: lightgoldenrodYELLOW;
+						color: #555;
 						display: flex;
 						flex-direction: row;
 						justify-content: space-between;
@@ -69,7 +69,7 @@ const Header = props => {
 					.link {
 						display: flex;
 						align-items: center;
-						font-size: 1.8rem;
+						font-size: 1.7rem;
 						letter-spacing: 1px;
 						padding-left: 0.7rem;
 						padding-right: 0.7rem;
