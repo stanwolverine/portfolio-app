@@ -12,26 +12,36 @@ const TERTIARY_COLOR = '#5b40c2';
 const MEHROON = 'rgb(173, 24, 24)';
 
 export default function HeroSection() {
-	return (
-		<>
-			<section className='hero-section'>
-				<div className='hero-heading'>
-					{/* <h2 className='hero-heading__hello'>Hello, I am</h2>
+  return (
+    <>
+      <section className='hero-section'>
+        <div className='hero-heading'>
+          {/* <h2 className='hero-heading__hello'>Hello, I am</h2>
 					<h1 className='hero-heading__name'>Jatin Nagar.</h1> */}
-					{/* <Typist>
+          {/* <Typist>
 						<h2 className='hero-heading__hello'>I am a developer.</h2>
 					</Typist> */}
-				</div>
-				<Slider />
-			</section>
+        </div>
+        <Slider
+          imgContainerStyles={{ position: 'absolute', bottom: 0, left: '50%' }}
+          imgSrcPath='/hero-only-mobile-426x240.png'
+        />
+      </section>
 
-			<style jsx>
-				{`
+      <style jsx>
+        {`
 					.hero-section {
 						min-height: calc(100vh - 5.5rem);
 						// background-color: ${LIGHT_SECONDARY_COLOR};
+						position: relative;
 					}
-					image {width: 100%; height: 100%;}
+					.hero-slider {
+						width: 80%;
+						height: auto;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
 					.hero-heading__hello {
 						font-family: Abril Fatface;
 						/* font-family: Fjalla one; */
@@ -54,7 +64,7 @@ export default function HeroSection() {
 						color: rgb(255, 224, 0);
 					}
 				`}
-			</style>
-		</>
-	);
+      </style>
+    </>
+  );
 }
