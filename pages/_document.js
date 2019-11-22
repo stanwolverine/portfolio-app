@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx) {
@@ -8,25 +8,27 @@ class MyDocument extends Document {
 
 	render() {
 		return (
-			<Html lang='en'>
+			<Html lang="en">
 				<Head>
-					<meta charSet='UTF8' />
-					<meta http-equiv='X-UA-Compatible' content='ie=edge' />
+					<meta charSet="UTF8" />
+					<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+					<link
+						rel="stylesheet"
+						href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Open+Sans|Oswald|EB+Garamond|Montserrat|Merriweather|Raleway|Roboto+Slab|Roboto|Playfair+Display|Source+Sans+Pro|Alegreya|Lato&display=swap"
+					/>
 					<style>
 						{`
-							@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Open+Sans|Oswald|EB+Garamond|Montserrat|Merriweather|Raleway|Roboto+Slab|Playfair+Display|Source+Sans+Pro|Alegreya|Lato&display=swap);
-
 							*,
 							*::after,
 							*::before {
 								padding: 0;
 								margin: 0;
 								box-sizing: inherit;
-              }
-              
-              html {
-								font-size: 62.5%;
-              }
+                            }
+                            
+                            html {
+                                font-size: 62.5%;
+                            }
 
 							body {
 								box-sizing: border-box;
