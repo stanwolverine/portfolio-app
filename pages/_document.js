@@ -11,14 +11,14 @@ class MyDocument extends Document {
       <Html lang='en'>
         <Head>
           <meta charSet='UTF8' />
-          <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+          <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Open+Sans|Oswald|EB+Garamond|Montserrat|Merriweather|Raleway|Roboto+Slab|Roboto|Playfair+Display|Source+Sans+Pro|Alegreya|Lato&display=swap'
           />
           <script
             src='https://kit.fontawesome.com/849b812d02.js'
-            crossorigin='anonymous'
+            crossOrigin='anonymous'
           ></script>
           <style>
             {`

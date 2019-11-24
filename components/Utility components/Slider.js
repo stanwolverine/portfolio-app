@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import BackgroundImage from './BackgroundImage';
 
-export default class Slider extends Component {
+export default class Slider extends PureComponent {
   state = { slider: 'slide-in' };
 
   static propsTypes = {
+    pageLoaded: PropTypes.bool,
     imgContainerStyles: PropTypes.object.isRequired,
     imgSrcPath: PropTypes.string.isRequired
   };
@@ -32,13 +33,17 @@ export default class Slider extends Component {
         <div className='slider'>
           <img src={this.props.imgSrcPath} alt='slider inside a phone' />
           <div className='black-box'>
-            <h2 className={`skills ${this.state.slider}`}>
-              <i
-                className='fab fa-js'
-                style={{ backgroundColor: 'black', color: 'yellow' }}
-              ></i>{' '}
-              Javascript
-            </h2>
+            {this.props.pageLoaded ? (
+              <h2 className={`skills ${this.state.slider}`}>
+                <i
+                  className='fab fa-js'
+                  style={{ backgroundColor: 'black', color: 'yellow' }}
+                ></i>{' '}
+                Javascript
+              </h2>
+            ) : (
+              <h2 className='profession'>Developer</h2>
+            )}
           </div>
         </div>
 
@@ -70,6 +75,13 @@ export default class Slider extends Component {
               display: flex;
               align-items: center;
               justify-content: center;
+            }
+
+            .profession {
+              color: white;
+              text-transform: capitalize;
+              font-size: 2.6rem;
+              letter-spacing: 1.3px;
             }
           `}
         </style>

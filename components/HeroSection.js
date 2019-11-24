@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Typist from 'react-typist';
 import Slider from './Utility components/Slider';
@@ -11,7 +11,7 @@ const LIGHT_SECONDARY_COLOR = '#3eafaf';
 const TERTIARY_COLOR = '#5b40c2';
 const MEHROON = 'rgb(173, 24, 24)';
 
-export default function HeroSection() {
+const HeroSection = memo(props => {
   return (
     <>
       <section className='hero-section'>
@@ -23,6 +23,7 @@ export default function HeroSection() {
 					</Typist> */}
         </div>
         <Slider
+          pageLoaded={props.pageLoaded}
           imgContainerStyles={{ position: 'absolute', bottom: 0, left: '50%' }}
           imgSrcPath='/hero-only-mobile-426x240.png'
         />
@@ -67,4 +68,6 @@ export default function HeroSection() {
       </style>
     </>
   );
-}
+});
+
+export default HeroSection;
