@@ -1,44 +1,50 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const BackgroundImage = props => {
-	useEffect(() => {
-		console.log(`${window.innerWidth}x${window.innerHeight}`);
-	}, []);
+  useEffect(() => {
+    console.log(`${window.innerWidth}x${window.innerHeight}`);
+  }, []);
 
-	return (
-		<>
-			<div className={`bg-image ${props.className}`}>{props.children}</div>
+  return (
+    <>
+      <div className={`bg-image ${props.className}`}>{props.children}</div>
 
-			<style jsx>
-				{`
-					.bg-image {
-						@media screen and (min-width: 1600px) {
-							background-image: url("/hero-bg-1600x900.jpg");
-						}
-						@media screen and (min-width: 1366px) {
-							background-image: url("/hero-bg-1366x768.jpg");
-						}
-						@media screen and (min-width: 1280px) {
-							background-image: url("/hero-bg-1280x720.jpg");
-						}
-						background-position: ${props.position};
-						background-size: ${props.size};
-					}
-				`}
-			</style>
-		</>
-	);
+      <style jsx>
+        {`
+          .bg-image {
+            background-position: ${props.position};
+            background-size: ${props.size};
+          }
+          @media screen and (min-width: 1600px) {
+            .bg-image {
+              background-image: url('/hero-bg-1600x900.jpg');
+            }
+          }
+          @media screen and (min-width: 1366px) {
+            .bg-image {
+              background-image: url('/hero-bg-1366x768.jpg');
+            }
+          }
+          @media screen and (max-width: 1280px) {
+            .bg-image {
+              background-image: url('/hero-bg-1280x720.jpg');
+            }
+          }
+        `}
+      </style>
+    </>
+  );
 };
 
 BackgroundImage.defaultProps = {
-	className: "",
-	position: "center",
-	size: "cover"
+  className: '',
+  position: 'center',
+  size: 'cover'
 };
 
 BackgroundImage.propTypes = {
-	bgImage: PropTypes.string.isRequired
+  bgImage: PropTypes.string.isRequired
 };
 
 export default BackgroundImage;
